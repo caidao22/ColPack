@@ -170,11 +170,11 @@ if(ENABLE_OPENMP)
     target_link_libraries(ColPack_shared PRIVATE ${OpenMP_CXX_FLAGS})
 endif()
 
-install(FILES ${HEADERS} DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/ColPack_headers)
+install(FILES ${HEADERS} DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/ColPack)
 
 install(TARGETS ColPack_shared EXPORT ColPackTargets
         ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}/shared_archive
-        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/shared_library
+        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
         RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}/shared_runtime)
 
 
